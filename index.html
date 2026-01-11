@@ -33,6 +33,25 @@
          grid-row: span 1;
       }
 
+      /* Box styling */
+      .box{
+         background-color:gray;
+         padding:10px;
+      }
+      .containerBox{
+         margin-top:50px;
+         display:grid;
+         gap:20px;
+         grid-template-columns: repeat(4, 1fr);
+         grid-template-rows: repeat(3,100px) 50px 50px;
+      }
+      .sidebar{
+         grid-row: span 5;
+      }
+      .footer{
+         grid-column: span 3;
+      }
+
       @media screen and (max-width:576px){
          .container{
             display:grid;
@@ -46,6 +65,23 @@
             grid-row: span 1;
             grid-column:span 1;
          }
+
+         .containerBox{
+            margin-top:50px;
+            display:grid;
+            gap:20px;
+            grid-template-columns: repeat(2, 1fr);
+         }
+         .box{
+            grid-row: span 1;
+            grid-column: span 1;
+         }
+         /* .sidebar{
+            grid-row: span 1;
+         }
+         .footer{
+            grid-column: span 1;
+         } */
       }
       
     </style>
@@ -63,6 +99,21 @@
       <div class="normal-layout"><img src="images/I.jpg"/></div>
       <div class="small-layout"><img src="images/G.jpg"/></div>
       <div class="small-layout"><img src="images/H.jpg"/></div>
+   </div>
+
+   <div class="containerBox">
+      <div class="box sidebar">1</div>
+      <div class="box">2</div>
+      <div class="box">3</div>
+      <div class="box">4</div>
+      <div class="box">5</div>
+      <div class="box">6</div>
+      <div class="box">7</div>
+      <div class="box">8</div>
+      <div class="box">9</div>
+      <div class="box">10</div>
+      <div class="box footer">11</div>
+      <div class="box footer">12</div>
    </div>
 
 </body>
