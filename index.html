@@ -52,6 +52,41 @@
          grid-column: span 3;
       }
 
+      /* New page design started from here */
+      #page>*{
+         border:3px solid gold;
+         background-color:blanchedalmond;
+         padding:30px;
+      }
+      header{
+         grid-area:header;
+      }
+      nav{
+         grid-area:navber;
+      }
+      main{
+         grid-area:main;
+      }
+      #sidebar{
+         grid-area:sidebar;
+      }
+      #ad{
+         grid-area:ad;
+      }
+      footer{
+         grid-area:footer;
+      }
+      #page{
+         margin-top:80px;
+         display:grid;
+         gap:20px;
+         grid-template-areas:
+         "header header header header"
+         "navber main main sidebar"
+         "navber main main ad"
+         "footer footer footer footer"
+      }
+
       @media screen and (max-width:576px){
          .container{
             display:grid;
@@ -76,12 +111,18 @@
             grid-row: span 1;
             grid-column: span 1;
          }
-         /* .sidebar{
-            grid-row: span 1;
+         #page{
+            margin-top:80px;
+            display:grid;
+            gap:20px;
+            grid-template-areas:
+            "header"
+            "navber"
+            "main"
+            "sidebar"
+            "ad"
+            "footer"
          }
-         .footer{
-            grid-column: span 1;
-         } */
       }
       
     </style>
@@ -114,6 +155,25 @@
       <div class="box">10</div>
       <div class="box footer">11</div>
       <div class="box footer">12</div>
+   </div>
+
+
+   <div id="page">
+       <!-- Header section started from here -->
+       <header>Header</header>
+       <!-- Nav section started from here -->
+       <nav>Navber</nav>
+       <!-- Main section started from here -->
+       <main>
+         <h1>This is main section</h1>
+         <p>Epcot is a theme park at Walt Disney World Resort featuring exciting attractions, international pavilions, award-winning fireworks and seasonal special events.</p>
+       </main>
+       <!-- Sidebar section started from here -->
+       <aside id="sidebar">Sideber</aside>
+       <!-- Advertisement section started from here -->
+       <aside id="ad">Ad</aside>
+       <!-- Footer section started from here -->
+       <footer>Footer</footer>
    </div>
 
 </body>
